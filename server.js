@@ -91,11 +91,15 @@ app.post("/api/query", async (req, res) => {
             console.warn(`No extractable text found in ${fileName}, skipping.`);
             continue; // Skip empty files
         }
+        console.log('------------------->>>>>');
 
         const embedding = await generateEmbeddings(text);
+        console.log('=============');
         await addToIndex(embedding, text);
+        console.log('000000000000');
         processedFiles.push(fileName);
     }
+    console.log('-------------------');
 
     if (processedFiles.length === 0) {
         return res.status(400).json({ error: "No files were successfully processed" });
