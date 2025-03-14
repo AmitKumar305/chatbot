@@ -149,4 +149,8 @@ app.post("/api/query", async (req, res) => {
 
 });
 
+app.get('/', (req, res) => {
+    res.send('<h1>Server is running</h1>');
+})
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
