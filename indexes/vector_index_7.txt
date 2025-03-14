@@ -1,0 +1,19 @@
+
+
+Artificial Intelligence (AI) is transforming the way humans interact with technology. One of the 
+most significant advancements in AI is ChatGPT, a language model capable of 
+understanding and generating human-like text. 
+How ChatGPT Works 
+ChatGPT is powered by a deep learning model called a transformer. It is trained on vast 
+amounts of text data to generate meaningful responses based on user input. The model can 
+be fine-tuned for specific tasks, including answering questions from a set of documents. 
+Using PDFs for Question-Answering 
+ChatGPT can retrieve information from PDFs by following these steps: 
+1. Extract Text – The content of PDFs is processed and converted into searchable text. 
+2. Create Embeddings – Each passage from the PDFs is converted into numerical 
+vectors for efficient searching. 
+3. Similarity Search – When a user asks a question, the system finds the most 
+relevant text snippets from the PDFs. 
+4. Generate Answer – The extracted text is provided to ChatGPT, which formulates a 
+response based on it. 
+ 

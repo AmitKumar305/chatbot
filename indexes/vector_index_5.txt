@@ -1,0 +1,258 @@
+
+
+ 
+ 
+ 
+ 
+Prepared By: Anna Sharma Date: 15-03-2023 
+Reviewed By: Mohit Jain Revision No: 00 
+Approved By: Gaurav Yadav Page No: 
+Page 1 of 5 
+ 
+ 
+ 
+ 
+Standard Operating Procedure 
+ of  
+6-HI ROLLING MILL- Thickness Gauge Troubleshooting 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+STANDARD OPERATING PROCEDURE  
+FOR  
+6-HI ROLLING MILL- THICKNESS GAUGE 
+SYSTEM
+
+ 
+ 
+ 
+ 
+Prepared By: Anna Sharma Date: 15-03-2023 
+Reviewed By: Mohit Jain Revision No: 00 
+Approved By: Gaurav Yadav Page No: 
+Page 2 of 5 
+ 
+ 
+ 
+ 
+Standard Operating Procedure 
+ of  
+6-HI ROLLING MILL- Thickness Gauge Troubleshooting 
+ 
+ 
+1.0 Purpose:   
+The purpose of this procedure is to conduct Thickness Gauge Troubleshooting 
+safely. The  objective  of  this  procedure  is  to  give  guidance  to  perform all  task 
+in  a  safe manner  to reduce  risk associated  in  the Thickness  Gauge work that 
+can affect the safety & health of employees performing the task. 
+ 
+2.0 Responsibility 
+The  following employees are responsible to  implement  this  procedure while 
+working at Thickness Gauge system- 
+• Section Incharge 
+• Shift In charge/Supervisor 
+ 
+ 
+3.0 Safety Risks: 
+• Electrical Shock 
+• Material Fall 
+• Slip, trip & Fall 
+• Gamma Radiation Emission 
+ 
+4.0 Environment Impact:   
+• Radiational Hazards 
+ 
+5.0 Impact & Risk Control Requirements: 
+• LOTO procedure 
+• Insulated tools 
+• Personal Protective Equipment 
+     
+ 
+
+ 
+ 
+ 
+ 
+Prepared By: Anna Sharma Date: 15-03-2023 
+Reviewed By: Mohit Jain Revision No: 00 
+Approved By: Gaurav Yadav Page No: 
+Page 3 of 5 
+ 
+ 
+ 
+ 
+Standard Operating Procedure 
+ of  
+6-HI ROLLING MILL- Thickness Gauge Troubleshooting 
+ 
+                                                                                                              
+6.0 PPE’s Requirement 
+•  Safety Helmet 
+•  Electrical Hand Gloves 
+•  Safety Shoes 
+  
+7.0 Initial Checking:  
+ 
+ 
+Sr. 
+No 
+Activity Responsibility 
+1.  Always check for fault alarms on Gauge PC 
+Electrical team 
+2.  
+Standardization fault/ Shutter open command not working  
+Electrical team 
+3.  
+Gauge IN fail 
+Electrical team 
+4.  
+Gauge OUT fail 
+Electrical team 
+5.  
+Gauge not healthy 
+Electrical team 
+6.  
+Error in Gauge reading 
+Electrical team 
+ 
+ 
+8.0 Step Wise Procedure for Troubleshoot:  
+ 
+STEP-1 Standardization Failure/Shutter Open Command failure 
+Sr. 
+No 
+Activity Responsibility 
+1. 
+Check  air  pressure  in  regulator  in Thickness  Gauge valve 
+stand panel- It  should  be at least 2.5 bar and it should not 
+drop less than 2.0 bar during operation 
+Mechanical 
+team 
+2. 
+If  air  pressure  is 2.5  bar,  then  check 24V  Supply  valve, 
+check its wiring & rectify 
+Electrical team 
+3. 
+Check for Reed Switch healthy condition. 
+Electrical team 
+ 
+
+ 
+ 
+ 
+ 
+Prepared By: Anna Sharma Date: 15-03-2023 
+Reviewed By: Mohit Jain Revision No: 00 
+Approved By: Gaurav Yadav Page No: 
+Page 4 of 5 
+ 
+ 
+ 
+ 
+Standard Operating Procedure 
+ of  
+6-HI ROLLING MILL- Thickness Gauge Troubleshooting 
+ 
+STEP-2” Gauge In” Fail  
+ 
+Sr. 
+No 
+Activity Responsibility 
+1. 
+Firstly, Check 24V supply in DC valve which is connected in 
+air line. There should always be 24V DC supply 
+Electrical team 
+2. 
+Check for Gauge OUT proxy to be healthy and if not make it 
+healthy by checking the proxy manually. 
+Electrical team 
+3. 
+Check for VFD faults accordingly. 
+Electrical team 
+ 
+ 
+ 
+STEP-3” Gauge Out” Fail 
+ 
+Sr. 
+No 
+Activity Responsibility 
+1. 
+First, Check 24V supply in DC valve which is connected in air 
+line. There should always be 24V DC supply 
+Electrical team 
+2. 
+Check  for  Gauge  IN  proxy  to  be  healthy  and  if  not  make  it 
+healthy by checking the proxy manually. 
+Electrical team 
+3. 
+Check for VFD faults accordingly. 
+Electrical team 
+ 
+
+ 
+ 
+ 
+ 
+Prepared By: Anna Sharma Date: 15-03-2023 
+Reviewed By: Mohit Jain Revision No: 00 
+Approved By: Gaurav Yadav Page No: 
+Page 5 of 5 
+ 
+ 
+ 
+ 
+Standard Operating Procedure 
+ of  
+6-HI ROLLING MILL- Thickness Gauge Troubleshooting 
+ 
+ 
+ 
+STEP-4 Gauge not healthy 
+ 
+Sr. 
+No 
+Activity Responsibility 
+1.  
+Check if power supply is coming or not, if cables found damaged 
+replace them with new ones. 
+Electrical team 
+2.  
+Check  if  Communication  card  is  healthy  and  if  not,  reinsert  the 
+card or replace it accordingly. 
+Electrical team 
+3.  
+Check  if  the  PLC  Cards  are  working  properly  and  if  not,  reinsert 
+them with care and precision. 
+Electrical team 
+4.  
+Check  if  PLC  and  Gauge  PC  are  communicating  with  each  other 
+and  if  not,  reconnect  and tighten  the  ethernet  cable  and  reboot 
+the PC. 
+Electrical team 
+5.  
+The Pre-amplifier cum HT Card should be checked for its healthy 
+working. 
+Electrical team 
+ 
+ 
+STEP-5 Error in Gauge reading 
+ 
+Sr. 
+No 
+Activity Responsibility 
+1. 
+Check for any object hinderance on the Gauge surface and if 
+found remove it accordingly. 
+Electrical team 
+2. 
+Clean  the  surface  of  the  Source  to  avoid  any  formation  of 
+contaminants or dust particles on the Gauge. 
+Electrical team 
+ 

@@ -1,0 +1,196 @@
+
+
+ 
+ 
+ 
+ 
+Prepared By: HOS Date : 01-04-2020 
+Reviewed By: HOS Revision No: 00 
+Approved By: HOD Page No: 
+Page 1 of 4 
+ 
+ 
+ 
+ 
+                          SMP for Crane Maintenance 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+STANDARD MAINTENANCE PROCEDURE  
+FOR  
+ ELECTRICAL DEPARTMENT
+
+ 
+ 
+ 
+ 
+Prepared By: HOS Date : 01-04-2020 
+Reviewed By: HOS Revision No: 00 
+Approved By: HOD Page No: 
+Page 2 of 4 
+ 
+ 
+ 
+ 
+                          SMP for Crane Maintenance 
+ 
+1.0 Purpose:   
+•     Procedure for safe Crane maintenance. 
+ 2.0 Responsibility 
+•     HOD Electrical 
+3.0 Safety Risks: 
+•     Person can be experience shock. 
+4.0 Environment Impact:   
+•      Applicable.   
+5.0 Impact & Risk Control Requirements: 
+•      Ensure there should be no power. 
+•      Proper insulated rating equipment. 
+                                                                                                              
+6.0 Chemicals Required: 
+•      Not Applicable      
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+Prepared By: HOS Date : 01-04-2020 
+Reviewed By: HOS Revision No: 00 
+Approved By: HOD Page No: 
+Page 3 of 4 
+ 
+ 
+ 
+ 
+                          SMP for Crane Maintenance 
+ 
+ 
+ 
+ 
+7.0 Procedure:  
+ 
+The step-wise procedure is as follows: 
+ 
+Sr. 
+No 
+Activity Responsibility 
+1.  Organize pep talk before assigning job. Supervisor 
+2.  
+Issue work permit before maintenance 
+Supervisor 
+3.  
+Switch off the SFU/Breaker. 
+Electrician 
+4.  
+Ensure power supply gets off. 
+Electrician 
+5.  
+Provide danger board on it. 
+Electrician 
+6.  
+Check Main  Hoist,  Long  Travel  and  Cross  Travel motor 
+terminal block. 
+Electrician  
+7.  
+Check thruster, its operation and its connection. Fill oil if 
+required 
+Electrician 
+8.  
+Check Gravity, Rotary and L.T. & C.T. Limit Switches. 
+Electrician 
+9.  
+Check all the Connections of Protective panel 
+Electrician 
+10.  
+Remove danger tag from Panel. 
+Electrician 
+11.  
+Switch on the SFU/Breaker. 
+Electrician 
+12.  
+Trail after Maintenance. 
+Electrician 
+13.  
+Clean the work place & equipment after Maintenance 
+Electrician 
+14.  
+Submit the work permit after completion of Job. 
+Supervisor 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+Prepared By: HOS Date : 01-04-2020 
+Reviewed By: HOS Revision No: 00 
+Approved By: HOD Page No: 
+Page 4 of 4 
+ 
+ 
+ 
+ 
+                          SMP for Crane Maintenance 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8.0 Special Note:  
+•      We have provided earth fault relay in High Tension Breaker. 
+•      Earthing is provided to each motor. 
+•      Follow the safety rule (Work permit). 
+•      Everyone aware with First aid procedure if anybody experienced shock 
+9.0 References: 
+• Crane Electrical manual 
+10.0 Records: 
+ 
+  
+Sr.No Title of 
+Record 
+Reference No. of 
+Record 
+Location of 
+record 
+Retention 
+Time 
+1 Electrical 
+Logbook 
+ CGL 1 Year 
