@@ -1,110 +1,18 @@
 const express = require("express");
-const multer = require("multer");
-const fs = require("fs");
-const path = require("path");
 const axios = require("axios");
-const pdfParse = require("pdf-parse");
-const { Ollama } = require("ollama-node");
-const { createIndex, addToIndex, searchIndex } = require("./vectorStore.js");
+const { createIndex, searchIndex } = require("./vectorStore.js");
 const { generateEmbeddings } = require("./embeddings.js");
+const processFiles = require("./processFiles.js");
 const app = express();
 const PORT = 3000;
-const ollama = new Ollama();
-
-const upload = multer({ dest: "uploads/" });
 
 app.use(express.json());
 
-// Initialize FAISS vector store
 createIndex();
-
-// File Upload & Text Processing
-const folderPath = path.join(__dirname, "pdf-folder"); // Adjust folder path
-
-app.post("/api/upload", async (req, res) => {
-    if (!fs.existsSync(folderPath)) {
-        return res.status(400).json({ error: "Folder does not exist" });
-    }
-
-    const files = fs.readdirSync(folderPath).filter(file => file.endsWith(".pdf") || file.endsWith(".txt"));
-    if (files.length === 0) {
-        return res.status(400).json({ error: "No valid files found in the folder" });
-    }
-
-    const processedFiles = [];
-
-    for (const fileName of files) {
-        const filePath = path.join(folderPath, fileName);
-        let text = "";
-
-        if (fileName.endsWith(".pdf")) {
-            const data = await pdfParse(fs.readFileSync(filePath));
-            text = data.text;
-        } else {
-            text = fs.readFileSync(filePath, "utf-8");
-        }
-
-        if (!text.trim()) {
-            console.warn(`No extractable text found in ${fileName}, skipping.`);
-            continue; // Skip empty files
-        }
-
-        const embedding = await generateEmbeddings(text);
-        await addToIndex(embedding, text);
-        processedFiles.push(fileName);
-    }
-
-    if (processedFiles.length === 0) {
-        return res.status(400).json({ error: "No files were successfully processed" });
-    }
-
-    res.json({ message: "Files processed and stored", files: processedFiles });
-});
+processFiles();
 
 // Query Chatbot
 app.post("/api/query", async (req, res) => {
-
-
-    if (!fs.existsSync(folderPath)) {
-        return res.status(400).json({ error: "Folder does not exist" });
-    }
-
-    const files = fs.readdirSync(folderPath).filter(file => file.endsWith(".pdf") || file.endsWith(".txt"));
-    if (files.length === 0) {
-        return res.status(400).json({ error: "No valid files found in the folder" });
-    }
-
-    const processedFiles = [];
-
-    for (const fileName of files) {
-        const filePath = path.join(folderPath, fileName);
-        let text = "";
-
-        if (fileName.endsWith(".pdf")) {
-            const data = await pdfParse(fs.readFileSync(filePath));
-            text = data.text;
-        } else {
-            text = fs.readFileSync(filePath, "utf-8");
-        }
-
-        if (!text.trim()) {
-            console.warn(`No extractable text found in ${fileName}, skipping.`);
-            continue; // Skip empty files
-        }
-        console.log('------------------->>>>>');
-
-        const embedding = await generateEmbeddings(text);
-        console.log('=============');
-        await addToIndex(embedding, text);
-        console.log('000000000000');
-        processedFiles.push(fileName);
-    }
-    console.log('-------------------');
-
-    if (processedFiles.length === 0) {
-        return res.status(400).json({ error: "No files were successfully processed" });
-    }
-
 
     const { question } = req.body;
     if (!question) return res.status(400).json({ error: "Question is required" });
