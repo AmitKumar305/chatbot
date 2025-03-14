@@ -1,34 +1,38 @@
-import faiss from "faiss-node";
-import fs from "fs";
-import "dotenv/config";
+const faiss = require("faiss-node");
+const fs = require("fs");
+const path = require("path");
+require("dotenv/config");
 
-const INDEX_PATH = process.env.FAISS_INDEX;
+const folderPath = path.join(__dirname, "pdf-folder");
+
 let index;
 
-export const createIndex = () => {
-    if (fs.existsSync(INDEX_PATH)) {
-        index = faiss.readIndex(INDEX_PATH);
-    } else {
-        index = new faiss.IndexFlatL2(384); // 384-D vector (MiniLM model)
+const createIndex = () => {
+    index = new faiss.IndexFlatL2(384);
+};
+
+const addToIndex = async (embedding, text) => {
+    const id = index.ntotal();  // Current vector count as ID
+    const files = fs.readdirSync(folderPath);
+    if (id < files.length) {
+        index.add(Array.from(embedding));  // FAISS requires 2D array
+        fs.writeFileSync(`indexes/vector_index_${id}.txt`, text);  // Store text
+        console.log("Total vectors after adding:", index.ntotal());
     }
 };
 
-export const addToIndex = async (embedding, text) => {
-    const id = index.ntotal();  // Current vector count as ID
-    index.add(Array.from(embedding));  // FAISS requires 2D array
-    fs.writeFileSync(`indexes/${INDEX_PATH}_${id}.txt`, text);  // Store text
-    console.log("Total vectors after adding:", index.ntotal());
-};
-
-export const searchIndex = async (queryEmbedding) => {
+const searchIndex = async (queryEmbedding) => {
     console.log("Total vectors in index:", index.ntotal());
 
     const data = index.search(Array.from(queryEmbedding), 1); // Top 1 match
 
+    console.log(data);
+
     const relevantIds = data.labels.filter((id) => id !== -1);
+    console.log(relevantIds);
 
     const results = relevantIds.map((id) => {
-        const filePath = `indexes/${INDEX_PATH}_${id}.txt`;
+        const filePath = `indexes/vector_index_${id}.txt`;
         if (!fs.existsSync(filePath)) {
             console.warn(`File not found: ${filePath}`);
             return null;
@@ -37,6 +41,12 @@ export const searchIndex = async (queryEmbedding) => {
     }).filter(Boolean); // Remove null values
     return results;
 };
+
+module.exports = {
+    createIndex,
+    addToIndex,
+    searchIndex
+}
 
 
 

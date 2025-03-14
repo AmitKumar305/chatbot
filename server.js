@@ -1,19 +1,12 @@
-import express from "express";
-import multer from "multer";
-import fs from "fs";
-import path from "path";
-import axios from "axios";
-import pdfParse from "pdf-parse";
-import { Ollama } from "ollama-node";
-import { createIndex, addToIndex, searchIndex } from "./vectorStore.js";
-import { generateEmbeddings } from "./embeddings.js";
-
-import { fileURLToPath } from "url";
-import { dirname } from "path";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
+const express = require("express");
+const multer = require("multer");
+const fs = require("fs");
+const path = require("path");
+const axios = require("axios");
+const pdfParse = require("pdf-parse");
+const { Ollama } = require("ollama-node");
+const { createIndex, addToIndex, searchIndex } = require("./vectorStore.js");
+const { generateEmbeddings } = require("./embeddings.js");
 const app = express();
 const PORT = 3000;
 const ollama = new Ollama();
@@ -124,8 +117,6 @@ app.post("/api/query", async (req, res) => {
     .replace(/\n+/g, ' ') // Remove excessive newlines
     .replace(/\s+/g, ' ') // Remove excessive spaces
     .trim();
-
-    // console.log(cleanedContext);
 
     const apiKey = process.env.VITE_API_KEY;
     const apiUrl = process.env.VITE_API_URL;
