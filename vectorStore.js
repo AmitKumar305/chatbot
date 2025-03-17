@@ -12,11 +12,11 @@ const createIndex = () => {
 };
 
 const addToIndex = async (embedding, text) => {
-    const id = index.ntotal();  // Current vector count as ID
+    const id = index.ntotal();
     const files = fs.readdirSync(folderPath);
     if (id < files.length) {
-        index.add(Array.from(embedding));  // FAISS requires 2D array
-        fs.writeFileSync(`indexes/vector_index_${id}.txt`, text);  // Store text
+        index.add(Array.from(embedding));
+        fs.writeFileSync(`indexes/vector_index_${id}.txt`, text);
         console.log("Total vectors after adding:", index.ntotal());
     }
 };
@@ -24,7 +24,7 @@ const addToIndex = async (embedding, text) => {
 const searchIndex = async (queryEmbedding) => {
     console.log("Total vectors in index:", index.ntotal());
 
-    const data = index.search(Array.from(queryEmbedding), 1); // Top 1 match
+    const data = index.search(Array.from(queryEmbedding), 1);
 
     console.log(data);
 
@@ -38,7 +38,7 @@ const searchIndex = async (queryEmbedding) => {
             return null;
         }
         return fs.readFileSync(filePath, "utf-8");
-    }).filter(Boolean); // Remove null values
+    }).filter(Boolean);
     return results;
 };
 

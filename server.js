@@ -28,8 +28,8 @@ app.post("/api/query", async (req, res) => {
 
     
     const cleanedContext = context
-    .replace(/\n+/g, ' ') // Remove excessive newlines
-    .replace(/\s+/g, ' ') // Remove excessive spaces
+    .replace(/\n+/g, ' ')
+    .replace(/\s+/g, ' ')
     .trim();
 
     const apiKey = process.env.VITE_API_KEY;
