@@ -48,10 +48,6 @@ app.post("/api/query", async (req, res) => {
     };
     try {
         const response = await axios.post(url, data);
-        console.log(
-            'AI resposne: ',
-            response.data.candidates[0].content.parts[0].text,
-        );
         res.json({
             message: 'Details fetched successfully',
             data: response.data.candidates[0].content.parts[0].text,

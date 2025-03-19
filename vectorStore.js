@@ -22,11 +22,7 @@ const addToIndex = async (embedding, text) => {
 };
 
 const searchIndex = async (queryEmbedding) => {
-    console.log("Total vectors in index:", index.ntotal());
-
     const data = index.search(Array.from(queryEmbedding), 1);
-
-    console.log(data);
 
     const relevantIds = data.labels.filter((id) => id !== -1);
     console.log(relevantIds);
